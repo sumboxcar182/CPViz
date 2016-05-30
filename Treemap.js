@@ -24,6 +24,11 @@ sPlot.prototype.addData = function(x, y, z) {
   this.data.push(x != null ? x : 0);
 };
 
+sPlot.prototype.createPlotlyRepresentation = function()
+{
+	++sPlot.numCreated;
+}
+
 
 document.addEventListener('DOMContentLoaded', function(event) {
 
