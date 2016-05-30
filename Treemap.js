@@ -12,6 +12,19 @@
 	   my = e.pageY;
 	}
 
+function sPlot (testname, dataPoint) {
+  this.testName = testname;
+  this.data = [];
+}
+
+sPlot.numCreated = 0;
+
+
+sPlot.prototype.addData = function(x, y, z) {
+  this.data.push(x != null ? x : 0);
+};
+
+
 document.addEventListener('DOMContentLoaded', function(event) {
 
    // add javascript code here
